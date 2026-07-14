@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const baseURL = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? 'http://localhost:5000/api' : '/api');
+// Use the Vite proxy in development and the same deployed origin in production.
+// Set VITE_API_URL only when the frontend and API are deployed separately.
+const baseURL = import.meta.env.VITE_API_URL || '/api';
 
 const api = axios.create({
   baseURL,

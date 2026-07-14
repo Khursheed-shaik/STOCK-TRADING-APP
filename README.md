@@ -6,7 +6,7 @@ Whether you're a beginner learning the basics of investing or an experienced tra
 
 ---
 
-## 🚀 Features
+# 🚀 Features
 
 ### 🔐 Authentication
 - User Registration
@@ -114,7 +114,66 @@ SB-Stocks/
 
 ---
 
-# ⚙️ Installation
+# ⚙️ Quick Setup
+
+## Install all dependencies
+
+```bash
+npm run install:all
+```
+
+## Create Backend Environment File
+
+Copy:
+
+```
+backend/.env.example
+```
+
+to
+
+```
+backend/.env
+```
+
+Fill in:
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+ALPHA_VANTAGE_API_KEY=your_alpha_vantage_api_key
+```
+
+## Create Frontend Environment File
+
+Copy:
+
+```
+client/.env.example
+```
+
+to
+
+```
+client/.env
+```
+
+Add:
+
+```env
+VITE_API_URL=http://localhost:5000/api
+```
+
+## Start Development Server
+
+```bash
+npm run dev
+```
+
+---
+
+# ⚙️ Manual Installation
 
 ## Clone Repository
 
@@ -122,7 +181,7 @@ SB-Stocks/
 git clone https://github.com/Khursheed-shaik/STOCK-TRADING-APP.git
 ```
 
-Move into the project folder
+Move into the project directory.
 
 ```bash
 cd STOCK-TRADING-APP
@@ -137,18 +196,7 @@ cd backend
 npm install
 ```
 
-Create a `.env` file inside the `backend` directory.
-
-Example:
-
-```env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-ALPHA_VANTAGE_API_KEY=your_alpha_vantage_api_key
-```
-
-Start the backend server:
+Start backend.
 
 ```bash
 npm run dev
@@ -164,26 +212,13 @@ npm start
 
 ## Frontend Setup
 
-Open another terminal.
-
 ```bash
 cd client
 npm install
-```
-
-Create a `.env` file inside the `client` directory.
-
-```env
-VITE_API_URL=http://localhost:5000/api
-```
-
-Start the frontend.
-
-```bash
 npm run dev
 ```
 
-Open your browser.
+Open:
 
 ```
 http://localhost:5173
@@ -281,10 +316,9 @@ GET /api/transactions
 
 ---
 
-
 # 📄 License
 
-This project is developed for educational and learning purposes.
+This project is developed for educational purposes.
 
 ---
 
